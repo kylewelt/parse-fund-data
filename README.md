@@ -11,8 +11,9 @@ Each text file input will contain three lines:
 #### Input Format Assumptions:
 1. Input files should be provided in an _ASCII_ encoded _.txt_ file.
 2. Input is split into lines delimited by newline characters.
-3. The file should consist of exactly three lines, outlined in the order described above.
+3. The file should consist of exactly three lines, outlined in the order and format described above.
 4. The final line of input is terminated by a newline character.
+5. Fund Monthly Returns should be valid numbers and each separated by a comma.
 
 ### Output Format:
 
@@ -57,4 +58,4 @@ To execute and parse the fund information file, you must have Node.js installed 
 ```
 node parse_fund_data.js < input_one.txt
 ```
-where input_one.txt is the filepath to the input file you'd like to parse.
+where _input\_one.txt_ is the filepath to the input file you'd like to parse.

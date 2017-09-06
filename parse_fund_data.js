@@ -61,10 +61,21 @@ function getBestMonth (returns) {
 }
 
 function main () {
+  if (input_stdin_array.length <= 3) {
+    console.log('Fund does not meet the input file requirements.');
+    return -1;
+  }
+
   let fund_name = readLine();
   let fund_year = readLine();
-  let fund_return_strings = readLine().split(', ');
-  let fund_returns = arrayValuesToNumbers(fund_return_strings);
+  let fund_return_values = readLine().split(/,\s*/g);
+
+  if (fund_return_values.length !== 12) {
+    console.log('Fund must contain 12 comma-separated return values on line three.');
+    return -1;
+  }
+
+  let fund_returns = arrayValuesToNumbers(fund_return_values);
 
   let cumulative_return = getCumulativeReturn(fund_returns);
   let percent_positive = getPercentPositive(fund_returns);
