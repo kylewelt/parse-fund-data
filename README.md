@@ -57,4 +57,4 @@ To execute and parse the fund information file, you must have Node.js installed 
 ```
 node parse_fund_data.js < input_one.txt
 ```
-where input_one.txt is the filepath to the input file you'd like to parse.
+where _input\_one.txt_ is the filepath to the input file you'd like to parse.
